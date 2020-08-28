@@ -7,9 +7,9 @@ export default class Buttons extends Component {
 
     render() {
         return (
-            <span> 
+            <> 
                 <button onClick={this.click}>{this.props.children}</button> 
-            </span>
+            </>
         )
     }
 }

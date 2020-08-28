@@ -27,12 +27,12 @@ class Counter extends Component {
         const test = 'lorem ipsum'
 
         return (
-            <div>
+            <>
                 <p>{counter}</p>
                 <p><button onClick={this.click}>+1</button></p>
                 <p>{test}</p>
                 <p>experiment: {this.experiment}</p>
-            </div>
+            </>
         )
     }
 }

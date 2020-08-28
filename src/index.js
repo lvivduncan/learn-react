@@ -8,6 +8,9 @@ import Properties from './components/Properties'
 import Buttons from './components/Buttons'
 import Nav from './components/Nav'
 import Check from './components/Check'
+import Form from './components/Form'
+import Func from './components/Func'
+import ChangeButtons from './components/ChangeButtons'
 
 // server
 import * as serviceWorker from './serviceWorker'
@@ -23,7 +26,8 @@ ReactDOM.render(
     <Lesson />
     <Counter />
     <hr />
-    <Properties name={'Якийсь текст'} age={25} />
+    <Properties name={'Текст задано, а в рядку нижче буде дефолтний текст'} age={25} />
+    <Properties age={35} />
     <Buttons>1</Buttons>
     <Buttons>2</Buttons>
     <Buttons>3</Buttons>
@@ -31,6 +35,12 @@ ReactDOM.render(
     <Nav nav={nav} />
     <hr />
     <Check />
+    <hr />
+    <Form />
+    <hr />
+    <Func city={'Lviv'} />
+    <hr />
+    <ChangeButtons />
   </React.StrictMode>,
   document.getElementById('root')
 )

@@ -9,3 +9,5 @@ export default class Properties extends Component {
         )
     }
 }
+// дефолтний текст
+Component.defaultProps = {name: 'Duncan'}
