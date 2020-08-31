@@ -13,16 +13,28 @@ export default class ChangeButtons extends Component {
         this.reset = this.reset.bind(this)
     }
 
+    // тут викликаєш анонімну функцію, яка присвоює по 1
+    // plus(){
+    //     this.setState(state => ({
+    //         number: state.number++
+    //     }))
+    // }
+
+    // тут просто присвоюєш значення: 1
     plus(){
-        this.setState(state => ({
-            number: state.number + 1
-        }))
+        this.setState({number: 1})
     }
+
+    view(e){
+        this.setState({ content: e.target.value })
+    }
+
     minus(){
         this.setState(state => ({
-            number: state.number - 1
+            number: state.number--
         }))
     }
+
     reset(){
         this.setState(state => ({
             number: 0

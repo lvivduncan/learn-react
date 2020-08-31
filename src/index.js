@@ -14,33 +14,50 @@ import ChangeButtons from './components/ChangeButtons'
 
 // server
 import * as serviceWorker from './serviceWorker'
+// auto import work! =)
+import Autoimport from './components/Autoimport'
+import Home from './pages/Home'
+import About from './pages/About'
+import Contacts from './pages/Contacts'
+import { BrowserRouter,Route } from 'react-router-dom'
 
-const nav = {
+/* const nav = {
   home: '/home',
   about: '/about',
-  contact: '/contact'
-}
+  contact: '/contacts'
+} */
 
 ReactDOM.render(
   <React.StrictMode>
-    <Lesson />
-    <Counter />
-    <hr />
-    <Properties name={'Текст задано, а в рядку нижче буде дефолтний текст'} age={25} />
-    <Properties age={35} />
-    <Buttons>1</Buttons>
-    <Buttons>2</Buttons>
-    <Buttons>3</Buttons>
-    <hr />
-    <Nav nav={nav} />
-    <hr />
-    <Check />
-    <hr />
-    <Form />
-    <hr />
-    <Func city={'Lviv'} />
-    <hr />
-    <ChangeButtons />
+      <BrowserRouter>
+        <hr />
+          <p>Pages: </p>
+          <Route path='/home' component={Home} />
+          <Route path='/about' component={About} />
+          <Route path='/contacts' component={Contacts} />
+        <hr />
+        <Lesson />
+        <Counter />
+        <hr />
+        <Properties name={'Текст задано, а в рядку нижче буде дефолтний текст'} age={25} />
+        <Properties age={35} />
+        <Buttons>1</Buttons>
+        <Buttons>2</Buttons>
+        <Buttons>3</Buttons>
+        <hr />
+        {/* <Nav nav={nav} /> */}
+        <Nav />
+        <hr />
+        <Check />
+        <hr />
+        <Form test_state={'test state...'} />
+        <hr />
+        <Func city={'Lviv'} />
+        <hr />
+        <ChangeButtons />
+        <hr />
+        <Autoimport />
+      </BrowserRouter>
   </React.StrictMode>,
   document.getElementById('root')
 )

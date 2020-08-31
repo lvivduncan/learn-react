@@ -5,14 +5,20 @@ export default class Form extends Component {
         super(props)
 
         this.state = {
-            content: ''
+            content: '',
+            test: ''
         }
 
         this.view = this.view.bind(this)
     }
 
+    // маловживаний метод 
+    static getDerivedStateFromProps(props,state){
+        return {test: props.test_state}
+    }
+
     view(e){
-        this.setState({ content: e.target.value})
+        this.setState({ content: e.target.value })
     }
 
     render() {
@@ -20,6 +26,7 @@ export default class Form extends Component {
             <div>
                 <p><input onChange={this.view} /></p>
                 <p>{this.state.content}</p>
+                <p>getDerivedStateFromProps: {this.state.test}</p>
             </div>
         )
     }

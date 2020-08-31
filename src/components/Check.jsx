@@ -17,7 +17,7 @@ export default class Check extends Component {
     }
 
     render() {
-        let message;
+        let message = ''
 
         this.state.checked ? message = 'yes' : message = 'no'
          

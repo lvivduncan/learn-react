@@ -10,4 +10,4 @@ export default class Properties extends Component {
     }
 }
 // дефолтний текст
-Component.defaultProps = {name: 'Duncan'}
+Component.defaultProps = {name: 'текст, який відображається по дефолту'}
